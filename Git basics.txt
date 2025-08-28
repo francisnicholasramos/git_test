@@ -17,11 +17,18 @@ git add --all - all files
 git add -A - all files
 git add . - entire directory
 
+#Git stash (fugitive)
+Git stash list - list of git stash
+Git stash -m "Example info" - naming a stash to be informational
+Git stash - save uncommitted work 
+Git stash -u -m "Info about u're saving" - saving uncommitted work including untracked files
+Git stash pop - remove last stashed uncommited work/branch
+Git stash pop stash@{0} - remove specific stash (so always name it)
+
 #Undo Changes (fugitive)
 !git clean -fd  - Removes all untracked files and directories (not staged, not committed, not ignored by .gitignore)
 !git reset --hard HEAD  - Revert ALL staged, unstaged, and created files/directories
-X - Revert staged, unstaged, and untracked files
-Git stash -u -m "Info about u're saving" - saving uncommitted work including untracked files
+<Shift-x> - Revert staged, unstaged, and untracked files
 
 #Colorful output (optional)
 git config --global color.ui auto
